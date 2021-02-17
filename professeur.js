@@ -22,6 +22,11 @@ class EmployeUniversite {
     nomComplet() {
         return this.prenom + ", " + this.nom;
     }
+    information() {
+        return this.numeroEmploye + " - "
+            + this.nomComplet() +
+            " - Ancienneté: " + this.anneesExperience;
+    }
 }
 
 /**
@@ -44,8 +49,9 @@ employe = new EmployeUniversite('Pierre', 'Martel', 'E0004', 5);
 employe.augmenterAnciennete();
 console.log(employe.nomComplet());
 console.log(employe.anneesExperience);
+console.log(prof.information());
 
-
+ 
 //Code pour tester la classe d'un professeur universitaire
 prof = new EmployeUniversiteProfesseur('Carmel', 'Simon', 'P0007', 4, 65000, []);
 prof.augmenterAnciennete();
